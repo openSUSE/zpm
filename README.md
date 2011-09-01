@@ -15,7 +15,7 @@ The goal is to keep simplicity while supporting the following requirements:
 
 ## Example
 
-'''C
+```C
 #include "zpm.h"
 #include "stdio.h"
 
@@ -31,7 +31,7 @@ int main()
     zpm_destroy(z);
     return 0;
 }
-'''
+```
 
 ## License
 
