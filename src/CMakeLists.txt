@@ -1,4 +1,18 @@
 
-set(zpm_SRCS zpm.cc zpm_query.cc)
+set(zpm_SRCS
+  zpm.cc
+  zpm_solvable_iter.cc
+  zpm_checksum.cc
+  zpm_download.cc
+  zpm_metalink.cc
+  zpm_query.cc
+  zpm_repoinfo.cc
+  zpm_repos.cc
+)
+
 add_library(zpm SHARED ${zpm_SRCS})
-target_link_libraries(zpm ${ZYPP_LIBRARY})
+target_link_libraries(zpm solvext)
+target_link_libraries(zpm solv)
+target_link_libraries(zpm expat)
+target_link_libraries(zpm z)
+target_link_libraries(zpm rpm)

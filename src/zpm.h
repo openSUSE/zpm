@@ -12,7 +12,11 @@ extern "C" {
 
 zpm* zpm_create(const char *root);
 
-zpm_solvable_iter *zpm_query_what_provides(const char *what);
+void zpm_easy_init(zpm *z);
+
+void zpm_read_repos(zpm *z);
+
+zpm_solvable_iter *zpm_query_what_provides(zpm *z, const char *what);
 
 zpm_solvable * zpm_solvable_iter_next(zpm_solvable_iter *);
 
