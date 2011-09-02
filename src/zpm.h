@@ -17,11 +17,14 @@ void zpm_easy_init(zpm *z);
 void zpm_read_repos(zpm *z);
 
 zpm_solvable_iter *zpm_query_what_provides(zpm *z, const char *what);
+zpm_solvable_iter *zpm_query_search(zpm *z, const char *what);
 
 zpm_solvable * zpm_solvable_iter_next(zpm_solvable_iter *);
 
 const char * zpm_solvable_name(zpm_solvable *s);
-const char * zpm_solvable_version(zpm_solvable *s);
+const char * zpm_solvable_evr(zpm_solvable *s);
+const char * zpm_solvable_arch(zpm_solvable *s);
+const char * zpm_solvable_repo(zpm_solvable *s);
 
 void zpm_solvable_destroy(zpm_solvable *s);
 

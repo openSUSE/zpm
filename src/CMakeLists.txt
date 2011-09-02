@@ -5,7 +5,8 @@ set(zpm_SRCS
   zpm_checksum.cc
   zpm_download.cc
   zpm_metalink.cc
-  zpm_query.cc
+  zpm_query_what_provides.cc
+  zpm_query_search.cc
   zpm_repoinfo.cc
   zpm_repos.cc
 )

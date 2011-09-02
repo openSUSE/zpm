@@ -73,10 +73,21 @@ const char * zpm_solvable_name(zpm_solvable *s)
     return pool_id2str(s->repo->pool, s->name);
 }
 
-const char * zpm_solvable_version(zpm_solvable *s)
+const char * zpm_solvable_evr(zpm_solvable *s)
 {
     return pool_id2str(s->repo->pool, s->evr);
 }
+
+const char * zpm_solvable_arch(zpm_solvable *s)
+{
+    return pool_id2str(s->repo->pool, s->arch);
+}
+
+const char * zpm_solvable_repo(zpm_solvable *s)
+{
+    return s->repo->name;    
+}
+
 
 void zpm_destroy(zpm *z)
 {
