@@ -44,3 +44,6 @@ http://www.gnu.org/licenses/gpl.html
 * Duncan Mac-Vicar P. <dmacvicar@suse.de>
 * Michael Andres <ma@suse.de>
 
+Most of the code comes from solv.c example from libsolv
+written by Michael Schroeder <mls@suse.de>
+
