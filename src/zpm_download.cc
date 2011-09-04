@@ -15,7 +15,7 @@ extern "C" {
 #include "zpm_tmpfile.h"
 
 FILE * curlfopen(zpm_repoinfo *cinfo, const char *file, int uncompress, const unsigned char *chksum, Id chksumtype, int *badchecksump)
-{    
+{
   pid_t pid;
   int fd, l;
   int status;
@@ -101,7 +101,7 @@ FILE * curlfopen(zpm_repoinfo *cinfo, const char *file, int uncompress, const un
       close(fd);
       return 0;
     }
-  if (chksumtype && !verify_checksum(fd, file, chksum, chksumtype))
+  if (chksumtype && !zpm_verify_checksum(fd, file, chksum, chksumtype))
     {
       if (badchecksump)
 	*badchecksump = 1;

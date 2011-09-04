@@ -6,10 +6,11 @@
 
 extern "C" {
 #include <solv/solvable.h>
+#include <solv/pool.h>
 }
 
-int verify_checksum(int fd, const char *file, const unsigned char *chksum, Id chksumtype);
-int checksig(Pool *sigpool, FILE *fp, FILE *sigfp);
+int zpm_verify_checksum(int fd, const char *file, const unsigned char *chksum, Id chksumtype);
+
 int checksig(Pool *sigpool, FILE *fp, FILE *sigfp);
 void calc_checksum_fp(FILE *fp, Id chktype, unsigned char *out);
 void calc_checksum_stat(struct stat *stb, Id chktype, unsigned char *out);

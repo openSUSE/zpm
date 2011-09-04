@@ -11,7 +11,7 @@ extern "C" {
 #include "zpm_checksum.h"
 
 int
-verify_checksum(int fd, const char *file, const unsigned char *chksum, Id chksumtype)
+zpm_verify_checksum(int fd, const char *file, const unsigned char *chksum, Id chksumtype)
 {
   char buf[1024];
   const unsigned char *sum;
